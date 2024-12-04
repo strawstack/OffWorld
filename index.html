@@ -8,8 +8,12 @@
   <body>
 
     <script type="module">
-        import rpc from './offWorld.js';
-        const { writeFile } = rpc;
+        import offWorld from './offWorld.js';
+
+        const { writeFile } = offWorld({
+          server: "http://localhost:3000" 
+        });
+        
         writeFile("test.txt", "file contents");
     </script>
 
