@@ -23,6 +23,6 @@ A Javascript module that communicates with a local server to calll common Nodejs
 2. `OffWorld` takes your call to `writeFile` and sends it to the localhost server where it gets run.
 3. Note, this allows one to effectively call various Nodejs functions from Javascript.
 
-# Why go OffWorld?
+# Why Go OffWorld?
 
 Javascript in the client is sandboxed and is limited in some ways that Nodejs is not. `OffWorld` allows Javscript to access functionality that only Nodejs typically has. One might wish to save state from a website to their local machine, or read a text file from their local filesystem into a website.
