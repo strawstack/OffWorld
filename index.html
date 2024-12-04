@@ -8,7 +8,8 @@
   <body>
 
     <script type="module">
-        import { writeFile } from './offWorld.js';
+        import rpc from './offWorld.js';
+        const { writeFile } = rpc;
         writeFile("test.txt", "file contents");
     </script>
 

@@ -1,7 +1,11 @@
-import { writeFileSync } from 'fs';
+import { 
+    writeFileSync,
+    readFileSync
+} from 'fs';
 
 const cmds = {
-    writeFile: writeFileSync
+    writeFile: writeFileSync,
+    readFile: readFileSync
 };
 
 const server = Bun.serve({
@@ -14,7 +18,6 @@ const server = Bun.serve({
         if (req.method === "POST" && path === "/cmd") {
             const data = await req.json();
             const result = cmds[data.cmd](...data.args);
-            console.log(`result: ${result}`);
             return new Response("success");
         }
 
